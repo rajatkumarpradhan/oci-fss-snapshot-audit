@@ -21,7 +21,7 @@ def rule_prod_without_snapshots(fss: tuple, as_of: date) -> list:
     del as_of
     return [
         Finding("FSS001", "HIGH", f.display_name,
-                "tagged tier=prod but has zero snapshots; production data has no recovery point")
+                "tagged tier=prod but has zero snapshots; no snapshot-based recovery point is recorded in this export")
         for f in fss if f.is_prod() and not f.snapshots
     ]
 
@@ -45,7 +45,7 @@ def rule_mature_without_snapshots(fss: tuple, as_of: date) -> list:
     return [
         Finding("FSS003", "MEDIUM", f.display_name,
                 f"{f.age_days(as_of)} days old (> {MATURE_DAYS}) with zero snapshots; "
-                f"no longer a throwaway, still no recovery point")
+                f"no longer a throwaway, and no snapshot coverage is recorded in this export")
         for f in fss if not f.snapshots and f.age_days(as_of) > MATURE_DAYS
     ]
 
