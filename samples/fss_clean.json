@@ -1,0 +1,11 @@
+{
+  "file_systems": [
+    {"ocid": "ocid1.filesystem.oc1..f9", "display_name": "prod-shared-data",
+     "created_at": "2026-01-10", "tags": {"tier": "prod", "owner": "data-team"},
+     "snapshots": [{"name": "daily-2026-11-17", "created_at": "2026-11-17"},
+                   {"name": "daily-2026-11-16", "created_at": "2026-11-16"}]},
+    {"ocid": "ocid1.filesystem.oc1..f10", "display_name": "new-scratch",
+     "created_at": "2026-11-15", "tags": {"tier": "dev", "owner": "analytics"},
+     "snapshots": []}
+  ]
+}
