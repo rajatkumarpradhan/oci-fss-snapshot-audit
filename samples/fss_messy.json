@@ -1,0 +1,16 @@
+{
+  "file_systems": [
+    {"ocid": "ocid1.filesystem.oc1..f1", "display_name": "prod-shared-data",
+     "created_at": "2026-01-10", "tags": {"tier": "prod", "owner": "data-team"},
+     "snapshots": []},
+    {"ocid": "ocid1.filesystem.oc1..f2", "display_name": "analytics-scratch",
+     "created_at": "2026-02-01", "tags": {"tier": "dev", "owner": "analytics"},
+     "snapshots": [{"name": "manual-march", "created_at": "2026-03-01"}]},
+    {"ocid": "ocid1.filesystem.oc1..f3", "display_name": "legacy-export",
+     "created_at": "2025-12-01", "tags": {"tier": "dev"},
+     "snapshots": []},
+    {"ocid": "ocid1.filesystem.oc1..f4", "display_name": "ci-cache",
+     "created_at": "2026-11-10", "tags": {},
+     "snapshots": [{"name": "ci-daily", "created_at": "2026-11-17"}]}
+  ]
+}
